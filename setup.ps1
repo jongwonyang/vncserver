@@ -2,10 +2,10 @@ $TIGHTVNC_URL = "https://www.tightvnc.com/download/2.8.81/tightvnc-2.8.81-gpl-se
 $WEBSOCKIFY_URL = "https://github.com/novnc/websockify/archive/refs/tags/v0.11.0.zip"
 $PYTHON_URL = "https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe"
 
-$TIGHTVNC_PATH = ".\TightVNC.msi"
-$WEBSOCKIFY_PATH = ".\websokify.zip"
-$WEBSOCKIFY_DEST = ".\websockify"
-$PYTHON_PATH = ".\python-3.12.0.exe"
+$TIGHTVNC_PATH = ".\temp\TightVNC.msi"
+$WEBSOCKIFY_PATH = ".\temp\websokify.zip"
+$WEBSOCKIFY_DEST = ".\temp\websockify"
+$PYTHON_PATH = ".\temp\python-3.12.0.exe"
 
 # Download
 Invoke-WebRequest -Uri $TIGHTVNC_URL -OutFile $TIGHTVNC_PATH
