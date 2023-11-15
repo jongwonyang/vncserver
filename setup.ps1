@@ -7,6 +7,9 @@ $WEBSOCKIFY_PATH = ".\temp\websokify.zip"
 $WEBSOCKIFY_DEST = ".\temp\websockify"
 $PYTHON_PATH = ".\temp\python-3.12.0.exe"
 
+# Make temp directory
+New-Item temp -ItemType Directory -Force
+
 # Download
 Invoke-WebRequest -Uri $TIGHTVNC_URL -OutFile $TIGHTVNC_PATH
 Invoke-WebRequest -Uri $WEBSOCKIFY_URL -OutFile $WEBSOCKIFY_PATH
