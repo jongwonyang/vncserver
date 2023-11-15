@@ -23,4 +23,6 @@ Start-Process -FilePath $PYTHON_PATH -Wait
 
 # Install noVNC
 Expand-Archive -Path $WEBSOCKIFY_PATH -DestinationPath $WEBSOCKIFY_DEST -Force
-Start-Process -FilePath "python" -ArgumentList ".\$WEBSOKIFY_DEST\websokify-0.11.0\setup.py", "install" -Wait
+Start-Process -FilePath "python" -ArgumentList "-m", "pip", "install", "setuptools" -Wait
+Set-Location ".\$WEBSOCKIFY_DEST\websockify-0.11.0"
+Start-Process -FilePath "python" -ArgumentList "setup.py", "install" -Wait
