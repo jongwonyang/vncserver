@@ -28,3 +28,4 @@ Expand-Archive -Path $WEBSOCKIFY_PATH -DestinationPath $WEBSOCKIFY_DEST -Force
 Set-Location ".\$WEBSOCKIFY_DEST\websockify-0.11.0"
 & python -m pip install setuptools
 & python setup.py install
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + [System.Environment]::GetEnvironmentVariable("Path", "User")
