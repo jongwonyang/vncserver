@@ -21,7 +21,7 @@ Start-Process -FilePath $TIGHTVNC_PATH -Wait
 
 # Install python
 Start-Process -FilePath $PYTHON_PATH -Wait
-$env.Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + [System.Environment]::GetEnvironmentVariable("Path", "User")
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + [System.Environment]::GetEnvironmentVariable("Path", "User")
 
 # Install websockify
 Expand-Archive -Path $WEBSOCKIFY_PATH -DestinationPath $WEBSOCKIFY_DEST -Force
