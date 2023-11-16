@@ -24,4 +24,5 @@ Start-Process -FilePath $PYTHON_PATH -Wait
 # Install websockify
 Expand-Archive -Path $WEBSOCKIFY_PATH -DestinationPath $WEBSOCKIFY_DEST -Force
 & python -m pip install setuptools
-& python .\$WEBSOCKIFY_DEST\websockify-0.11.0\setup.py install
+Set-Location ".\$WEBSOCKIFY_DEST\websockify-0.11.0"
+& python setup.py install
