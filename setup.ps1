@@ -18,11 +18,11 @@ Invoke-WebRequest -Uri $PYTHON_URL -OutFile $PYTHON_PATH
 # Install TightVNC
 Start-Process -FilePath $TIGHTVNC_PATH -Wait
 
-# Install Python
+# Install python
 Start-Process -FilePath $PYTHON_PATH -Wait
 
-# Install noVNC
+# Install websockify
 Expand-Archive -Path $WEBSOCKIFY_PATH -DestinationPath $WEBSOCKIFY_DEST -Force
-Start-Process -FilePath "python" -ArgumentList "-m", "pip", "install", "setuptools" -Wait
+& python -m pip install setuptools
 Set-Location ".\$WEBSOCKIFY_DEST\websockify-0.11.0"
-Start-Process -FilePath "python" -ArgumentList "setup.py", "install" -Wait
+& python .\$WEBSOCKIFY_DEST\websockify-0.11.0setup.py install
